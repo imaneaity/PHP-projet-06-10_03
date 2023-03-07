@@ -28,6 +28,25 @@
                 <button>Valider</button>
             </form>
         </section>
+
+
+        <section>
+            <h2>Connexion</h2>
+            <form action="routes/signin.php" method="post">
+                <input 
+                    type="email"
+                    name="email"
+                    placeholder="exemple@gmail.com"
+                />
+                <input 
+                type="password"
+                name="password"
+                placeholder="Mot De Passe"
+                >
+
+                <button>Valider</button>
+            </form>
+        </section>
     </main>
 
 </body>

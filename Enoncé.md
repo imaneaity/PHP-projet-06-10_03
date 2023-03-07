@@ -10,25 +10,29 @@ Table: todos: id, contenu, date, isDone, auteurID
 
 ## Page login
 
-- Un formulaire pour s'inscrire 
-- Script pour ajouter un user dans la base de données 
+- Un formulaire pour s'inscrire * 
+- Script pour ajouter un user dans la base de données  *
 
   //Exercice:
-  // 1. Créer une classe 'UserController'.
-  // 2. Constructeur(email, password)
+  // 1. Créer une classe 'UserController'. *
+  // 2. Constructeur(email, password) *
   // 3. ajouter des méthodes:
-  //  3.1. ajouter un Getter et setter pour email.
-  //  3.2 isEmailValid: Tester si l'email possède un @ -> return boolean
-  //  3.3 isPasswordValid: Tester si le mot de passe est non vide et sup. a 6 -> return boolean
-  //  3.4 isDataValid: retourne si email valide ET password valide. -> return boolean
+  //  3.1. ajouter un Getter et setter pour email. *
+  //  3.2 isEmailValid: Tester si l'email possède un @ -> return boolean *
+  //  3.3 isPasswordValid: Tester si le mot de passe est non vide et sup. a 6 -> return boolean*
+  //  3.4 isDataValid: retourne si email valide ET password valide. -> return boolean *
 
 
 - formulaire de connection 
 - script pour verifier si l'utilisateur a donné un email et password valide 
 - Stocker les infos (id, email, avatar, role) quelque part: session 
+vue(form en html)=> route signin.php =>usercontroller=> verification de l'utilisateur=> usermodel => retourner si l'utilisateur exist => créer un session pour l'utilisateur
 
 - Mieux gerer les erreurs.
 
+
+
+session: c'est l'element qui garde l'utilisateur connecté et qui garde temporairement son email, avatar, id,role
 ## Page Profil
 
 - Afficher l'avatar de l'utilisateur, sinon afficher une image par défaut. 
