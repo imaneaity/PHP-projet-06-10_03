@@ -12,6 +12,7 @@ Table: todos: id, contenu, date, isDone, auteurID
 
 - Un formulaire pour s'inscrire 
 - Script pour ajouter un user dans la base de données 
+
   //Exercice:
   // 1. Créer une classe 'UserController'.
   // 2. Constructeur(email, password)
@@ -20,10 +21,6 @@ Table: todos: id, contenu, date, isDone, auteurID
   //  3.2 isEmailValid: Tester si l'email possède un @ -> return boolean
   //  3.3 isPasswordValid: Tester si le mot de passe est non vide et sup. a 6 -> return boolean
   //  3.4 isDataValid: retourne si email valide ET password valide. -> return boolean
-
-
-
-
 
 
 - formulaire de connection 

@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php 
-       include '' 
+        
     ?>
 
     <h1> Accueil </h1>
