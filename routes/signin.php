@@ -17,17 +17,21 @@ if(!(isset($_POST['email'], $_POST['password']))){ // si le formulaire a une err
 //instencier le UserController
 $user = new UserController($_POST['email'], $_POST['password']);
 
-//TODO: tester si les données sont valides sinon lever une erreur.
+// tester si les données sont valides sinon lever une erreur et fermer la session.
+if(!($user->isDataValid())){
+    header("Location: ../login.php?connexion=error&".$user->getErrors());
+    die();
+}
 
 //verif si l'utilisateur existe sinon fermer la session
 if(!($user->exist())){
-    header("Location: /login.php?connexion=error&emailError=EmailDoesntExist");
+    header("Location: ../login.php?connexion=error&emailError=EmailDoesntExist");
     die();
 }
 
 //verif si le mdp est correct
 if(!$user -> isPasswordCorrect()){
-    header("Location: /login.php?connexion=error&passwordError=PasswordIncorrect");
+    header("Location: ../login.php?connexion=error&passwordError=PasswordIncorrect");
     die();
 }
 

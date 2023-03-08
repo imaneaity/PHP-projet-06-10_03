@@ -54,3 +54,8 @@ button{
     margin: 0.5em 0;
     border: none;
 }
+
+.error{
+    color: red;
+    font-size: 0.9em;
+}
