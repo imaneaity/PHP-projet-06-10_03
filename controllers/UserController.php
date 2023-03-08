@@ -1,6 +1,5 @@
 <?php
 
-declare(strict_types=1);
 
 
 include_once $_SERVER['DOCUMENT_ROOT']."/TODO/models/UserModel.php";
@@ -37,6 +36,26 @@ class UserController
     {
         return $this->isEmailValid() && $this->isPasswordValid();
     }
+
+    //generer une chaine de caractére des erreurs
+    function getErrors(){
+        //declaration d'un tableau d'erreurs
+        $errors= [];
+        if(!($this->isEmailValid())){ //si l'email n'est pas valide
+            //ajouter l'erreur au tableau
+            array_push($errors, "emailError=InputInvalid");
+        }
+
+        if(!($this->isPasswordValid())){ // si le mdp n'est pas valide
+            //ajouter l'erreur au tableau
+            array_push($errors, "passwordError=InputInvalid");            
+        }
+
+        //retourner la chaine de caractére des erreurs
+        return join("&", $errors);
+        //emailError=InputInvalid&passwordError=InputInvalid
+    }
+
 
     function signupUser(){
         //sauvgarde des informations dans la base de données
@@ -89,7 +108,8 @@ class UserController
     }
 
 
-    function exist(){
+    function exist()
+    {
     $userModel = new UserModel($this->email, $this->password);
     //recup le tableau des infos de l'utilisateur
     //user tab contient le tableau des infos du user et fetch les cherches
