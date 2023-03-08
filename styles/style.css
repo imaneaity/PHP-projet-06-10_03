@@ -37,7 +37,7 @@ form{
 input{
     margin: 0.5em 0;
     padding: 0.5em;
-    border: none;
+
     border-radius: 0.5em;
 }
 
@@ -59,3 +59,7 @@ button{
     color: red;
     font-size: 0.9em;
 }
+
+.inputError{
+    border: 1px solid red;
+  }

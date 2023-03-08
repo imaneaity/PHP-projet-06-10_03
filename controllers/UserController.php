@@ -9,7 +9,7 @@ class UserController
     private $email;
     private $password;
     private $id;
-    private $avatarURL;
+    private $avatarURL="profil-avatar.jpg";
     private $role;
 
 
@@ -61,7 +61,7 @@ class UserController
         //sauvgarde des informations dans la base de données
         $userModel= new UserModel($this->email, $this->password);
         $userModel->addToDB();
-        var_dump($this->email);
+        
 
     }
 
@@ -122,7 +122,11 @@ class UserController
     } else { //cas ou l'utilisateur existe bel et bien
         //enregistrer les informations de l'utilisateur afin de créer sa session
         $this->id = $userTab['id'];
-        $this->avatarURL = $userTab['avatarURL'];
+        if ($userTab['avatarURL'] == null){
+            $this->avatarURL = "./images/users/profil-avatar.jpg";
+         }else{
+            $this->avatarURL = $userTab['avatarURL'];
+        }
         $this -> role= $userTab['role'];
 
         return true;
