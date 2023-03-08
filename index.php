@@ -9,10 +9,7 @@
     $title = "Accueil";
     include_once "./components/head.php"
 ?>
-
-
-<body>
-    
+<body> 
 <?php
     include_once "./components/navbar.php"
 ?>
