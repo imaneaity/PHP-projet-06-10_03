@@ -11,9 +11,7 @@
 
         <?= 
             isset($_SESSION) && isset($_SESSION['id']) ? 
-            "<li><a href='/TODO/routes/logout.php'> Se doconnecter </a></li>": ""
+            "<li><a href='/TODO/routes/logout.php'> Se déconnecter </a></li>": ""
         ?>
     </ul>
-
-
 </nav>
