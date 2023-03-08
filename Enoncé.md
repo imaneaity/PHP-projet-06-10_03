@@ -26,7 +26,7 @@ Table: todos: id, contenu, date, isDone, auteurID
 - formulaire de connection 
 - script pour verifier si l'utilisateur a donné un email et password valide 
 - Stocker les infos (id, email, avatar, role) quelque part: session 
-vue(form en html)=> route signin.php =>usercontroller=> verification de l'utilisateur=> usermodel => retourner si l'utilisateur exist => créer un session pour l'utilisateur
+vue(form en html)=> route signin.php =>usercontroller(exist(), isPasswordCorrect)=> verification de l'utilisateur=> usermodel(fetch) => retourner si l'utilisateur exist et le mdp est correct => créer une session pour l'utilisateur
 
 - Mieux gerer les erreurs.
 
