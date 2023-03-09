@@ -3,6 +3,7 @@
 
 
 include_once $_SERVER['DOCUMENT_ROOT']."/TODO/models/UserModel.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/TODO/controllers/TodoController.php";
 
 class UserController
 {
@@ -161,6 +162,11 @@ class UserController
         function saveImage($avatar){
             $this-> userModel-> saveImageToDB($avatar);
             return $avatar;
+        }
+
+        function addTodo($todo){
+            $todoController = new TodoController($todo, $this->id);
+            $todoController->addTodo();
         }
 
     /**

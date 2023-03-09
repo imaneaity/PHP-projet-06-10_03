@@ -26,7 +26,7 @@ class DB
         return $this->connect;
     }
 
-    static function getConnection(){
+    static function getConnection(){ //static car je ne veut pas changer cette fonction
         return new self();
     }
 }
