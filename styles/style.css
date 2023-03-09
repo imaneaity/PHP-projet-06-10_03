@@ -79,19 +79,54 @@ button{
     justify-content: center;
     align-items: center;
 }
-
-.todoNotDone{
-    border-bottom: 2px solid red;
-}
-
-.todoDone{
-    border-bottom: 2px solid green;
-}
-
 .todo{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1em;
     margin: 1em;
 }
+
+.todoNotDone{
+    border-bottom: 2px solid red;
+    justify-content: center;
+    align-items: center;
+}
+
+.todoDone{
+    border-bottom: 2px solid green;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.todo form{
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.todo button{
+    background-color: transparent;
+    width: 20px;
+    min-width: 40px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.todo button:hover{
+    background-color: aquamarine;
+}
+
+.todo img{
+    width: 20px;
+}
+.todo-controls{
+    display: flex;
+    background-color: transparent;
+}
+
+
+
