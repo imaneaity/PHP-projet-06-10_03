@@ -27,6 +27,10 @@ class TodoController
 
     }
 
+    static function fetchAll($auteurId){
+        return TodoModel::fetchAll($auteurId);
+    }
+
 
 
 }

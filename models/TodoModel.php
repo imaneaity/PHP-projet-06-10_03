@@ -39,4 +39,14 @@ class TodoModel extends DB
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+
+    static function fetchAll($id){
+        $connect = DB::getConnection();
+        $stmt= $connect->getConnect() ->prepare('SELECT * FROM todos WHERE auteurID = ? ');
+        $stmt->bindParam(1 , $id);
+        $res = $stmt ->execute();
+        $userFromDB = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $userFromDB;
+    }
 }

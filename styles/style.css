@@ -71,3 +71,27 @@ button{
     object-fit:  cover;
     border-radius: 100%;
 }
+
+.profil-infos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.todoNotDone{
+    border-bottom: 2px solid red;
+}
+
+.todoDone{
+    border-bottom: 2px solid green;
+}
+
+.todo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    margin: 1em;
+}

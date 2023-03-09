@@ -12,6 +12,7 @@ class UserController
     private $id;
     private $avatarURL="profil-avatar.jpg";
     private $role;
+    private $todos =[];
 
     private $userModel;
 
@@ -155,6 +156,8 @@ class UserController
             $controller -> role = $userFromDB['role'];
             $controller -> avatarURL = $userFromDB['avatarURL'];
 
+            $controller->todos = TodoController::fetchAll($id);
+
             return $controller;
         }
     
@@ -227,5 +230,13 @@ class UserController
         $this->role = $role;
 
         return $this;
+    }
+
+    /**
+     * Get the value of todos
+     */ 
+    public function getTodos()
+    {
+        return $this->todos;
     }
 }
