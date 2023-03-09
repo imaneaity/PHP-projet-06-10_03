@@ -35,6 +35,10 @@ class TodoController
         return TodoModel::updateIsDone($todoId);
     }
 
+    static function removeTodo($todoId){
+        return TodoModel::removeTodo($todoId);
+    }
+
 
 
 

@@ -46,7 +46,12 @@
                                 <img src="./images/check.svg" >
                             </button>
                         </form>
-
+                    <?php else: ?>
+                        <form class= "validateForm" action="/TODO/routes/removeTodo.php" method="GET">
+                            <button type="submit" name="remove" value="<?= $todoTab['id']?>">
+                                <img src="./images/remove.svg" >
+                            </button>
+                        </form>
                     <?php endif?>
                 </div>
             </div>
