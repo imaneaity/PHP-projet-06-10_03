@@ -31,6 +31,12 @@ class TodoController
         return TodoModel::fetchAll($auteurId);
     }
 
+    static function validateTodo($todoId){
+        return TodoModel::updateIsDone($todoId);
+    }
+
+
+
 
 
 }

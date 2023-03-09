@@ -37,14 +37,19 @@
         <i class="bi bi-check2-all"></i>
         <?php foreach($userController->getTodos() as $key => $todoTab):?>
             <div class= 'todo <?= ($todoTab['isDone']? "todoDone" : "todoNotDone") ?>' >
-            <p> <?= $todoTab["contenu"]?></p>
+                <p> <?= $todoTab["contenu"]?></p>
 
+                <div class="todo-controls">
+                    <?php if(!$todoTab['isDone']):?>
+                        <form class= "validateForm" action="/TODO/routes/validateTodo.php" method="GET">
+                            <button type="submit" name="validate" value="<?= $todoTab['id']?>">
+                                <img src="./images/check.svg" >
+                            </button>
+                        </form>
+
+                    <?php endif?>
+                </div>
             </div>
-
-
-
-
-
         <?php endforeach?>
     </section>
 

@@ -239,4 +239,8 @@ class UserController
     {
         return $this->todos;
     }
+
+    function validateTodo($todoID){
+        TodoController::validateTodo($todoID);
+    }
 }

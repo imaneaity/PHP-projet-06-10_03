@@ -1,0 +1,8 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_858_80)">
+    <rect y="213" width="512" height="86" fill="white" />
+    <path d="M0 33C0 14.7746 14.7746 0 33 0H479C497.225 0 512 14.7746 512 33V86H0V33Z" fill="white" />
+    <path d="M512 479C512 497.225 497.225 512 479 512L33 512C14.7746 512 0 497.225 0 479V426L512 426V479Z"
+      fill="white" />
+  </g>
+</svg>
