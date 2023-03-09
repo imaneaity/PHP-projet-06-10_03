@@ -19,7 +19,7 @@
         <p> <?= $_SESSION['email']?> </p>
 
         <p>Changer la photo de profil ici:</p>
-        <form action="/routes/uploadAvatar.php" method="POST">
+        <form action="/TODO/routes/uploadAvatar.php" method="POST">
             <input type="text" name="avatarURL" >
             <button>Enregistrer</button>
         </form>

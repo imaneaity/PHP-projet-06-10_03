@@ -12,7 +12,7 @@ class UserController
     private $avatarURL="profil-avatar.jpg";
     private $role;
 
-
+    private $userModel;
 
     private const MIN_PASSWORD_LENGTH =6;
 
@@ -21,6 +21,8 @@ class UserController
     { 
         $this->email= $email;
         $this->password = $password;
+
+        $this->userModel = new UserModel($email,$password);
     }
 
     function isEmailValid():bool{
@@ -144,8 +146,22 @@ class UserController
 
         }
 
-        
+        static function createUserFromId($id){
+
+            $userFromDB = UserModel::fetchByID($id);
+            $controller = new self($userFromDB['email'], $userFromDB['password']);
+            $controller -> id = $id;
+            $controller -> role = $userFromDB['role'];
+            $controller -> avatarURL = $userFromDB['avatarURL'];
+
+            return $controller;
+        }
     
+
+        function saveImage($avatar){
+            $this-> userModel-> saveImageToDB($avatar);
+            return $avatar;
+        }
 
     /**
      * Get the value of id
