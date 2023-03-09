@@ -16,6 +16,7 @@ if (isset($_POST['email'] , $_POST['password'])){
             die();
         }
         $user->signupUser();
+        header('Location: /TODO/login.php');
 
     }
     else{ //cas ou l'email ou le mdp ne sont pas valides
@@ -26,3 +27,5 @@ if (isset($_POST['email'] , $_POST['password'])){
 }else{ //cas ou le formulaire a beugé lors de l'envoie
     header('Location: /TODO/login.php');
 }
+
+
